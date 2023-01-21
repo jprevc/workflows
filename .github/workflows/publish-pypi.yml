@@ -18,7 +18,10 @@ jobs:
         python-version: ${{ inputs.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip build
+        python -m pip install --upgrade pip build py_version_from_tag
+    - name: Update version
+      run: |
+        python -m py_version_from_tag
     - name: Build package
       run: |
         python -m build
