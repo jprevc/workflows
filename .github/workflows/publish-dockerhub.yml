@@ -23,7 +23,7 @@ jobs:
         uses: docker/metadata-action@v4.3.0
         with:
           images: |
-            ${{ github.event.repository.name }}
+            josprevc/${{ github.event.repository.name }}
       - name: Build and push Docker images
         uses: docker/build-push-action@v3.3.0
         with:
